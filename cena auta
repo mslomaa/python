@@ -1,0 +1,18 @@
+# Program - Kalkulator pełnej ceny samochodu po uwzględnieniu podatku 2%,
+# opłaty rejestracyjnej 5%, prowizji sprzedazy dla dealera 1000 zł, opłaty za dostarczenie - 500 zł
+
+cena_sam = input("Cześć, \nWprowadź wartość samochodu: ")
+
+if "," in cena_sam:
+    cena_sam = cena_sam.replace(",", ".")
+
+cena_sam = float(cena_sam)
+podatek = int(cena_sam * 0.02)
+oplata_rej = int(cena_sam * 0.05)
+prowizja = 1000
+oplata_dost = 500
+
+suma = cena_sam + podatek+oplata_rej+prowizja+oplata_dost
+
+print("Wartość samochodu wynosi: " + "{:.2f}".format(cena_sam) + " zł")
+print("Cena samochodu po uwzględnieniu wszystkich opłat to: " + "{:.2f}".format(suma) + " zł")

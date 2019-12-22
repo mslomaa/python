@@ -1,0 +1,22 @@
+# losowy cytat na dziś
+
+import random
+print("Cześć, \n Za chwilę wylosuje dla Ciebie cytat na dziś")
+input("\n Kliknij ENTER aby wylosować")
+
+cytat = random.randint(1, 6)
+
+if cytat == 1:
+    print("Człowiek musi czasem chorować. Chociażby po to, żeby poczytać. \nSakutaro Hagiwara")
+elif cytat == 2:
+    print("Patrzyć bez zawiści, jak inni osiągają sukcesy, do których samemu się dąży, to wielkość. \nMarie von Ebner-Eschenbach")
+elif cytat == 3:
+    print("Kogo dotknęło nieszczęście, tego dotknie szczęście.\nPhil Bosmans")
+elif cytat == 4:
+    print("Nie istnieje żadne dobro – chyba że się je czyni.\nErich Kästner")
+elif cytat == 5:
+    print("Milcz albo mów coś lepszego od milczenia.\n Pitagoras")
+elif cytat == 6:
+    print("Na końcu wszystko będzie dobrze. Jeśli tak nie jest, oznacza to, że to jeszcze nie koniec.\nJohn Lennon")
+else:
+    print("Nastąpił błąd w losowaniu")

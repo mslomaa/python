@@ -1,0 +1,23 @@
+# Kalkulator 15 i 20% napiwku
+
+kwota = input("Cześć, \nWprowadź proszę kwotę swojego rachunku, a wyliczę dla Ciebie wartość napiwku dla kelnera:")
+
+if "," in kwota:
+     kwota = kwota.replace(",",".")
+
+while len(kwota) > 5:
+    print("Ops chyba wrowadziłeś/aś zbyt wiele liczb. \nWprowadź kwotę raz jeszcze:")
+    kwota = input()
+    if "," in kwota:
+        kwota = kwota.replace(",", ".")
+
+kwota = float(kwota)
+napiwek1 = float(kwota) * 1.20
+napiwek2 = float(kwota) * 1.15
+
+napiwek1 = napiwek1 - kwota
+napiwek2 = napiwek2 - kwota
+
+print("kwota rachunku wynosi:" + "{:.2f}".format(kwota) + " zł")
+print("Przy 15% wartości rachunku będzie to: " + "{:.2f}".format(napiwek2) + " zł napiwku")
+print("Przy 20% wartości rachunku będzie to: " + "{:.2f}".format(napiwek1) + " zł napiwku")

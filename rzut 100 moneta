@@ -1,0 +1,9 @@
+# Ile razy wypadnie orzeł, a ile resztka podczas 100 rzutów monetą
+
+import random
+losowanie = input("\nKliknij ENTER aby rozpocząć losowanie")
+
+orzel = random.randint(1, 100)
+reszka = 100 - orzel
+
+print("wyrzuciłeś " + str(orzel) + " razy orzeł " + "i  " + str(reszka) + " razy reszka")

@@ -1,0 +1,26 @@
+# Losowanie liczb
+
+import random
+losowanie = int(input("\nPodaj liczbę od 1 do 50 "))
+liczba = random.randint(1, 50)
+proba = 5
+
+while  losowanie >= 50:
+    if losowanie <= 50:
+        break
+    else:
+        print("Wprowadziłeś liczbę spoza żądanego zakresu")
+        print("Wprowadź liczbę raz jeszcze: ")
+        losowanie = int(input())
+
+
+while losowanie != liczba and proba != 0:
+    if losowanie == liczba:
+        print("Brawo! Własnie odgadłeś liczbę wylosowaną przez komputer")
+        break
+    else:
+        print("Niestety nie trafiłeś. Próbuj dalej. Pozostało " + str(proba) + " prób")
+        print("Wprowadź liczbę: ")
+        losowanie = input()
+        proba = proba - 1
+print("Niestety przegrałeś.... :( ")
